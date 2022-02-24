@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+//Submission scoreboard:
+
 //a_an_example -> Approach 3 -> gives score 5
 //b_basic -> Approach 3 -> gives score 5
 //c_coarse -> Approach 3 -> gives score 5
@@ -20,7 +22,7 @@ public class Main {
         String firstGroup[] = { "a_an_example.in.txt", "b_basic.in.txt" };
 
         for (String input : firstGroup) {
-            //getting input from file
+            // getting input from file
             List<Customer> customers = helper.getInputFromFile(input);
 
             Map<String, Integer> allIngredient = helper.getAllIngredient();
@@ -29,14 +31,15 @@ public class Main {
             List<String> choosedIngredientList = helper.toArrayList(choosedIngredient);
 
             helper.writeIntoFile(choosedIngredientList, input);
-            LocalScoreBoardSimulator localScoreBoardSimulator = new LocalScoreBoardSimulator(customers, choosedIngredient);
+            LocalScoreBoardSimulator localScoreBoardSimulator = new LocalScoreBoardSimulator(customers,
+                    choosedIngredient);
 
-            System.out.println("Score of" + input +" algo1 : " + localScoreBoardSimulator.getScore());
+            System.out.println("Score of" + input + " algo1 : " + localScoreBoardSimulator.getScore());
 
             Map<String, Integer> map = helper.algorithm_3(customers);
 
             LocalScoreBoardSimulator newsimulator = new LocalScoreBoardSimulator(customers, map);
-            System.out.println("Score of" + input +" algo3 : " + newsimulator.getScore());
+            System.out.println("Score of" + input + " algo3 : " + newsimulator.getScore());
 
         }
 
