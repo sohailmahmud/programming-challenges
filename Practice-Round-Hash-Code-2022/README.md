@@ -1,7 +1,5 @@
 # Solving-One-Pizza-Practice Round-Hash-Code-2022-Using-Java
 
-![](pizzeria.gif)
-
 Creating a java programing oriented object for practice round hashcode 2022 problem with the simulated score board
 
 # which approach did i used ?
